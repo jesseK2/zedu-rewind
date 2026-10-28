@@ -27,7 +27,10 @@ python -m http.server 8096
 
 ## Live
 
-The published build: https://zedu-rewind-kec16q5gjt9.qoder.website
+| Surface | URL |
+| --- | --- |
+| Landing page | https://zedu-rewind-kec16q5gjt9.qoder.website/landing.html |
+| Chat dashboard demo | https://zedu-rewind-kec16q5gjt9.qoder.website/ |
 
 ## Notes
 
