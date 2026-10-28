@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zedu — Learning platform for bootcamps, schools and cohorts</title>
+    <meta
+      name="description"
+      content="Zedu brings learners and educators together with organized conversations, seamless cohort collaboration, and affordable communication tools built for learning communities."
+    />
+    <link rel="icon" href="assets/zedu-mark.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#7141f8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Zedu" />
+    <meta property="og:title" content="Zedu — Built for bootcamps and learning communities" />
+    <meta
+      property="og:description"
+      content="Organized conversations, seamless cohort collaboration, and affordable communication tools built for learning communities."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Nunito:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body>
+    <svg class="sprite" aria-hidden="true" focusable="false">
+      <symbol id="i-bolt" viewBox="0 0 24 24">
+        <path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.6L13 2Z" />
+      </symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24">
+        <path d="M12 2.5c.7 4.6 2.9 6.8 7.5 7.5-4.6.7-6.8 2.9-7.5 7.5-.7-4.6-2.9-6.8-7.5-7.5 4.6-.7 6.8-2.9 7.5-7.5Z" />
+      </symbol>
+      <symbol id="i-hash" viewBox="0 0 24 24">
+        <path d="M9.5 3 7.5 21M16.5 3l-2 18M3.5 9h17M2.5 15h17" />
+      </symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24">
+        <path d="M21 14.5a4.5 4.5 0 0 1-4.5 4.5H9l-5 3V7.5A4.5 4.5 0 0 1 8.5 3h8A4.5 4.5 0 0 1 21 7.5v7Z" />
+      </symbol>
+      <symbol id="i-video" viewBox="0 0 24 24">
+        <rect x="2.5" y="6" width="13" height="12" rx="3" />
+        <path d="m15.5 10.5 6-3v9l-6-3" />
+      </symbol>
+      <symbol id="i-file" viewBox="0 0 24 24">
+        <path d="M6 2.5h7l5 5V21a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 21V2.5Z" />
+        <path d="M13 2.5v5h5M9 13h6M9 17h4" />
+      </symbol>
+      <symbol id="i-pen" viewBox="0 0 24 24">
+        <path d="M12 19 19 12a2.6 2.6 0 0 0-3.7-3.7L8.3 15.3 7 21l5.7-1.3Z" />
+        <path d="m14 8.5 3.5 3.5" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12.5 4.5 4.5L19 7" />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M4.5 12h15M13 5.5l6.5 6.5-6.5 6.5" />
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24">
+        <path
+          d="M12 2.8l2.8 5.9 6.5.9-4.7 4.5 1.1 6.4-5.7-3.1-5.7 3.1 1.1-6.4L3.2 9.6l6.5-.9L12 2.8Z"
+          fill="currentColor"
+          stroke="none"
+        />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path d="M3.5 7h17M3.5 12h17M3.5 17h17" />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M18 6 6 18" />
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24">
+        <path d="m6 9 6 6 6-6" />
+      </symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14" />
+      </symbol>
+      <symbol id="i-users" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="3.4" />
+        <path d="M2.8 20c.5-3.3 3.1-5.4 6.2-5.4s5.7 2.1 6.2 5.4" />
+        <path d="M16.4 5.2a3.2 3.2 0 0 1 0 6.2M18.4 14.9c1.9.6 3.2 2.3 3.5 4.6" />
+      </symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24">
+        <path d="m12 3 8.5 4.6L12 12.2 3.5 7.6 12 3Z" />
+        <path d="m4.5 12 7.5 4 7.5-4M4.5 16.5l7.5 4 7.5-4" />
+      </symbol>
+      <symbol id="i-help" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M9.6 9.4a2.5 2.5 0 1 1 3.6 2.3c-.8.4-1.2 1-1.2 1.9" />
+        <path d="M12 17h.01" />
+      </symbol>
+      <symbol id="i-book" viewBox="0 0 24 24">
+        <path d="M3.5 5.5A2 2 0 0 1 5.5 3.5H11v17H5.5a2 2 0 0 0-2 2v-17Z" />
+        <path d="M20.5 5.5a2 2 0 0 0-2-2H13v17h5.5a2 2 0 0 1 2 2v-17Z" />
+      </symbol>
+    </svg>
+
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="nav" id="top">
+      <div class="container nav-inner">
+        <a class="brand" href="#top" aria-label="Zedu home">
+          <img src="assets/zedu-logo.png" alt="Zedu" width="86" height="37" />
+        </a>
+
+        <nav class="nav-links" id="nav-links" aria-label="Primary">
+          <div class="nav-item" data-dropdown>
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-products">
+              Products
+              <svg class="icon nav-chev" aria-hidden="true"><use href="#i-chevron" /></svg>
+            </button>
+            <div class="nav-menu" id="menu-products">
+              <div class="menu-panel">
+                <p class="menu-label">Built for classrooms</p>
+                <a class="menu-link" href="#features">
+                  <span class="menu-icon tone-violet"><svg class="icon"><use href="#i-spark" /></svg></span>
+                  <span class="menu-copy">
+                    <span class="menu-title"><strong>AI Agents</strong><span class="menu-tag">New</span></span>
+                    <small>Assistants that never sleep</small>
+                  </span>
+                  <svg class="icon menu-go" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+                <a class="menu-link" href="#features">
+                  <span class="menu-icon tone-mint"><svg class="icon"><use href="#i-hash" /></svg></span>
+                  <span class="menu-copy">
+                    <span class="menu-title"><strong>Organized channels</strong></span>
+                    <small>Every subject in a tidy home</small>
+                  </span>
+                  <svg class="icon menu-go" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+                <a class="menu-link" href="#features">
+                  <span class="menu-icon tone-peach"><svg class="icon"><use href="#i-chat" /></svg></span>
+                  <span class="menu-copy">
+                    <span class="menu-title"><strong>Cohort communication</strong></span>
+                    <small>Announcements without the noise</small>
+                  </span>
+                  <svg class="icon menu-go" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+                <a class="menu-link" href="#features">
+                  <span class="menu-icon tone-sky"><svg class="icon"><use href="#i-video" /></svg></span>
+                  <span class="menu-copy">
+                    <span class="menu-title"><strong>Calls &amp; collaboration</strong></span>
+                    <small>Meet, share and review together</small>
+                  </span>
+                  <svg class="icon menu-go" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+                <a class="menu-foot" href="#features">
+                  See everything inside
+                  <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-item" data-dropdown>
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-solutions">
+              Solutions
+              <svg class="icon nav-chev" aria-hidden="true"><use href="#i-chevron" /></svg>
+            </button>
+            <div class="nav-menu" id="menu-solutions">
+              <div class="menu-panel">
+                <p class="menu-label">Made for your kind of learning</p>
+                <a class="menu-link" href="#start">
+                  <span class="menu-icon tone-violet"><svg class="icon"><use href="#i-bolt" /></svg></span>
+                  <span class="menu-copy">
+                    <span class="menu-title"><strong>Bootcamps</strong></span>
+                    <small>Ship cohorts without the chaos</small>
+                  </span>
+                  <svg class="icon menu-go" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+                <a class="menu-link" href="#start">
+                  <span class="menu-icon tone-mint"><svg class="icon"><use href="#i-book" /></svg></span>
+                  <span class="menu-copy">
+                    <span class="menu-title"><strong>Schools</strong></span>
+                    <small>Calm, organised classrooms online</small>
+                  </span>
+                  <svg class="icon menu-go" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+                <a class="menu-link" href="#start">
+                  <span class="menu-icon tone-peach"><svg class="icon"><use href="#i-users" /></svg></span>
+                  <span class="menu-copy">
+                    <span class="menu-title"><strong>Universities</strong></span>
+                    <small>Many programmes, one workspace</small>
+                  </span>
+                  <svg class="icon menu-go" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+                <a class="menu-foot" href="#start">
+                  Talk to our team
+                  <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-item" data-dropdown>
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-resources">
+              Resources
+              <svg class="icon nav-chev" aria-hidden="true"><use href="#i-chevron" /></svg>
+            </button>
+            <div class="nav-menu" id="menu-resources">
+              <div class="menu-panel">
+                <p class="menu-label">Have a look around</p>
+                <a class="menu-link" href="#compare">
+                  <span class="menu-icon tone-violet"><svg class="icon"><use href="#i-layers" /></svg></span>
+                  <span class="menu-copy">
+                    <span class="menu-title"><strong>Compare plans</strong></span>
+                    <small>Every little difference, side by side</small>
+                  </span>
+                  <svg class="icon menu-go" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+                <a class="menu-link" href="#faq">
+                  <span class="menu-icon tone-mint"><svg class="icon"><use href="#i-help" /></svg></span>
+                  <span class="menu-copy">
+                    <span class="menu-title"><strong>FAQ</strong></span>
+                    <small>The short, honest answers</small>
+                  </span>
+                  <svg class="icon menu-go" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+                <a class="menu-link" href="#pricing">
+                  <span class="menu-icon tone-peach"><svg class="icon"><use href="#i-star" /></svg></span>
+                  <span class="menu-copy">
+                    <span class="menu-title"><strong>Pricing</strong></span>
+                    <small>Free to start, friendly after that</small>
+                  </span>
+                  <svg class="icon menu-go" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+                <a class="menu-foot" href="#start">
+                  Say hello
+                  <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="#pricing">Pricing</a>
+          <a href="#start">About us</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="btn btn-primary btn-sm" href="index.html">Get started</a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+            <svg class="icon menu-open"><use href="#i-menu" /></svg>
+            <svg class="icon menu-close"><use href="#i-close" /></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-wash" aria-hidden="true"></div>
+        <div class="hero-rings" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="container hero-inner">
+          <p class="kicker reveal">For bootcamps, schools and cohorts</p>
+
+          <h1 class="reveal">
+            Built for
+            <span class="marked">bootcamps<svg class="swoosh" viewBox="0 0 200 44" preserveAspectRatio="none" aria-hidden="true"><path d="M4 40C22 14 62 4 102 4c40 0 74 10 94 34" vector-effect="non-scaling-stroke" /></svg></span>
+            and
+            <span class="hl">learning communities</span>.
+          </h1>
+
+          <p class="lead reveal">
+            Cohort chat that files itself. Zedu AI keeps every decision, resource and session from
+            your channels in one record — so nobody has to scroll back to Tuesday to find out what
+            was agreed.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="index.html">
+              Open the live demo
+              <svg class="icon"><use href="#i-arrow" /></svg>
+            </a>
+            <a class="btn btn-ghost" href="#start">Contact sales</a>
+          </div>
+
+          <div class="hero-proof reveal">
+            <span class="stars" aria-label="4.9 out of 5">
+              <svg class="icon"><use href="#i-star" /></svg>
+              <svg class="icon"><use href="#i-star" /></svg>
+              <svg class="icon"><use href="#i-star" /></svg>
+              <svg class="icon"><use href="#i-star" /></svg>
+              <svg class="icon"><use href="#i-star" /></svg>
+            </span>
+            <span><strong>4.9</strong> · Trusted by modern educators and learners worldwide</span>
+          </div>
+
+          <div class="hero-stats reveal" aria-label="Zedu in numbers">
+            <div class="stat">
+              <p class="stat-num"><span data-count="10000" data-suffix="+">10,000+</span></p>
+              <p class="stat-label">Learners supported</p>
+            </div>
+            <div class="stat">
+              <p class="stat-num"><span data-count="15000" data-suffix="+">15,000+</span></p>
+              <p class="stat-label">Conversations powered by AI</p>
+            </div>
+            <div class="stat">
+              <p class="stat-num"><span data-count="98" data-suffix="%">98%</span></p>
+              <p class="stat-label">Educator satisfaction</p>
+            </div>
+          </div>
+
+          <figure class="app reveal" aria-label="Zedu chat — a live cohort workspace where messages file themselves into kept records">
+            <div class="app-bar">
+              <div class="app-title">
+                <span class="app-mark"><svg class="icon"><use href="#i-bolt" /></svg></span>
+                <div>
+                  <strong>Zedu chat</strong>
+                  <span>Frontend Cohort 04 · Week 3</span>
+                </div>
+              </div>
+              <div class="app-meta">
+                <ul class="avatars" aria-label="Learners online">
+                  <li class="av av-1">A</li>
+                  <li class="av av-2">T</li>
+                  <li class="av av-3">J</li>
+                  <li class="av av-4">M</li>
+                  <li class="av av-5">+38</li>
+                </ul>
+                <span class="live-pill"><span class="pulse"></span>12 online</span>
+              </div>
+            </div>
+
+            <div class="app-body">
+              <aside class="app-rail" aria-label="Channels">
+                <p class="app-label">Channels</p>
+                <p class="chan"><svg class="icon"><use href="#i-hash" /></svg>general-buzz<span>12</span></p>
+                <p class="chan"><svg class="icon"><use href="#i-hash" /></svg>design-crit<span>4</span></p>
+                <p class="chan is-active"><svg class="icon"><use href="#i-hash" /></svg>frontend-04<span>8</span></p>
+                <p class="chan"><svg class="icon"><use href="#i-hash" /></svg>resources<span>3</span></p>
+                <p class="rail-foot"><span class="ai-dot"></span>Zedu AI is here</p>
+              </aside>
+
+              <div class="app-main">
+                <div class="app-main-head">
+                  <p class="app-label">Today · Tuesday 12</p>
+                  <p class="read-pill"><span class="ai-dot"></span><span class="read-text">Zedu AI is keeping up</span></p>
+                </div>
+
+                <ol class="thread" aria-label="Conversation in frontend-04">
+                  <li class="msg" data-src="d1">
+                    <span class="msg-av av-1" aria-hidden="true">A</span>
+                    <div class="msg-body">
+                      <p class="msg-meta"><b>Ada</b><i>9:02</i></p>
+                      <p class="msg-bubble">Can we lock the spacing scale before Friday?</p>
+                    </div>
+                    <span class="msg-tag">Decision</span>
+                  </li>
+                  <li class="msg" data-src="d2">
+                    <span class="msg-av av-2" aria-hidden="true">T</span>
+                    <div class="msg-body">
+                      <p class="msg-meta"><b>Toyo</b><i>9:04</i></p>
+                      <p class="msg-bubble">Yes — 4 / 8 / 16 / 24. No one-offs.</p>
+                    </div>
+                    <span class="msg-tag">Decision</span>
+                  </li>
+                  <li class="msg" data-src="d3">
+                    <span class="msg-av av-3" aria-hidden="true">M</span>
+                    <div class="msg-body">
+                      <p class="msg-meta"><b>Milo</b><i>9:05</i></p>
+                      <p class="msg-bubble">What about the 12px gap in the card grid?</p>
+                    </div>
+                    <span class="msg-tag">Decision</span>
+                  </li>
+                  <li class="msg" data-src="d4">
+                    <span class="msg-av av-4" aria-hidden="true">P</span>
+                    <div class="msg-body">
+                      <p class="msg-meta"><b>Priya</b><i>9:11</i></p>
+                      <p class="msg-bubble">Token sheet uploaded to resources.</p>
+                    </div>
+                    <span class="msg-tag">Resource</span>
+                  </li>
+                  <li class="msg" data-src="d5">
+                    <span class="msg-av av-2" aria-hidden="true">T</span>
+                    <div class="msg-body">
+                      <p class="msg-meta"><b>Toyo</b><i>9:12</i></p>
+                      <p class="msg-bubble">Review Thursday 16:00 — I’ll bring component states.</p>
+                    </div>
+                    <span class="msg-tag">Session</span>
+                  </li>
+                  <li class="msg" data-beat="live">
+                    <span class="msg-av av-1" aria-hidden="true">A</span>
+                    <div class="msg-body">
+                      <p class="msg-meta"><b>Ada</b><i>9:13</i></p>
+                      <p class="msg-bubble">When is the Figma review?</p>
+                    </div>
+                  </li>
+                  <li class="msg msg-ai" data-src="d7" data-beat="live">
+                    <span class="msg-av msg-av-ai" aria-hidden="true"><svg class="icon"><use href="#i-spark" /></svg></span>
+                    <div class="msg-body">
+                      <p class="msg-meta"><b>Zedu AI</b><i>9:13</i></p>
+                      <p class="msg-bubble">Thursday, 4pm — it’s on Week 3, and I pinged @Toyo.</p>
+                    </div>
+                    <span class="msg-tag">Session</span>
+                  </li>
+                </ol>
+
+                <p class="typing" aria-hidden="true"><i></i><i></i><i></i><span>Zedu AI is filing…</span></p>
+
+                <form class="composer" novalidate>
+                  <label class="sr-only" for="composer-input">Reply in frontend-04</label>
+                  <input class="composer-input" id="composer-input" type="text" name="message" placeholder="Reply in #frontend-04…" autocomplete="off" maxlength="140" />
+                  <button class="composer-send" type="submit" aria-label="Send message">
+                    <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+                  </button>
+                </form>
+
+                <div class="composer-chips">
+                  <span class="chips-label">Try</span>
+                  <button class="chip" type="button" data-say="Let’s lock the nav pattern.">Lock the nav pattern</button>
+                  <button class="chip" type="button" data-say="Retro Friday 15:00">Retro Friday 15:00</button>
+                  <button class="chip" type="button" data-say="Slides are in resources">Slides are in resources</button>
+                </div>
+              </div>
+
+              <aside class="app-side" aria-label="What Zedu AI keeps from the thread">
+                <div class="kept">
+                  <div class="kept-head">
+                    <p class="kept-title">Kept</p>
+                    <span class="kept-count"><b>3</b> records</span>
+                  </div>
+                  <p class="kept-sub">Decisions, sessions and resources — filed as the thread happens.</p>
+
+                  <ol class="kept-list" aria-label="Records kept from this thread">
+                    <li class="kept-card" data-kind="decision" data-src="d1 d2 d3">
+                      <button class="kept-open" type="button" aria-pressed="false" aria-label="Show the 3 messages behind the spacing scale decision">
+                        <span class="kept-icon"><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg></span>
+                        <span class="kept-copy">
+                          <span class="kept-kind">Decision</span>
+                          <strong>Spacing scale: 4 / 8 / 16 / 24</strong>
+                          <span class="kept-src"><i class="dot dot-1"></i><i class="dot dot-2"></i><i class="dot dot-3"></i>from 3 messages</span>
+                        </span>
+                      </button>
+                      <button class="kept-unfile" type="button" title="Unfile" aria-label="Unfile the spacing scale decision — the messages stay in the thread">
+                        <svg class="icon" aria-hidden="true"><use href="#i-close" /></svg>
+                      </button>
+                    </li>
+
+                    <li class="kept-card" data-kind="resource" data-src="d4">
+                      <button class="kept-open" type="button" aria-pressed="false" aria-label="Show the message behind the token sheet record">
+                        <span class="kept-icon"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg></span>
+                        <span class="kept-copy">
+                          <span class="kept-kind">Resource</span>
+                          <strong>Token sheet — Figma file</strong>
+                          <span class="kept-src"><i class="dot dot-1"></i>from 1 message</span>
+                        </span>
+                      </button>
+                      <button class="kept-unfile" type="button" title="Unfile" aria-label="Unfile the token sheet record — the messages stay in the thread">
+                        <svg class="icon" aria-hidden="true"><use href="#i-close" /></svg>
+                      </button>
+                    </li>
+
+                    <li class="kept-card" data-kind="session" data-src="d5 d7" data-beat="live">
+                      <button class="kept-open" type="button" aria-pressed="false" aria-label="Show the 2 messages behind the Figma review session">
+                        <span class="kept-icon"><svg class="icon" aria-hidden="true"><use href="#i-video" /></svg></span>
+                        <span class="kept-copy">
+                          <span class="kept-kind">Session</span>
+                          <strong>Figma review · Thu 16:00</strong>
+                          <span class="kept-src"><i class="dot dot-1"></i><i class="dot dot-2"></i>from 2 messages</span>
+                        </span>
+                      </button>
+                      <button class="kept-unfile" type="button" title="Unfile" aria-label="Unfile the Figma review session — the messages stay in the thread">
+                        <svg class="icon" aria-hidden="true"><use href="#i-close" /></svg>
+                      </button>
+                    </li>
+                  </ol>
+
+                  <p class="kept-empty" hidden>Nothing kept yet. Send a message and watch it file itself.</p>
+
+                  <p class="kept-foot">
+                    <svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>
+                    <span class="kept-foot-text">Nothing lost · messages stay in the thread</span>
+                    <button class="kept-undo" type="button" hidden>Undo</button>
+                  </p>
+                  <p class="sr-only kept-live" role="status" aria-live="polite"></p>
+                </div>
+
+                <div class="recap-card" aria-label="Today's recap status">
+                  <p class="recap-label"><svg class="icon" aria-hidden="true"><use href="#i-spark" /></svg>Today’s recap</p>
+                  <p class="recap-line"><b class="recap-count">3</b> records · 0 lost</p>
+                  <p class="recap-when">Files to #frontend-04 at 18:00</p>
+                </div>
+
+                <button class="progress-card" type="button" aria-label="Week 3 checkpoint — 14 of 24 submitted. Nudge the 10 quiet learners.">
+                  <span class="progress-copy">
+                    <strong>Week 3 checkpoint</strong>
+                    <span class="progress-sub"><b class="progress-done">14</b> of 24 submitted · <b class="progress-quiet">10</b> quiet</span>
+                  </span>
+                  <span class="progress-pct" aria-hidden="true">58%</span>
+                  <span class="progress" aria-hidden="true"><i style="width: 58%"></i></span>
+                  <span class="progress-hint" aria-hidden="true">
+                    <svg class="icon hint-spark"><use href="#i-spark" /></svg>
+                    <svg class="icon hint-check"><use href="#i-check" /></svg>
+                    <span class="hint-text">Nudge them</span>
+                  </span>
+                  <span class="sr-only" role="status"></span>
+                </button>
+              </aside>
+            </div>
+
+            <svg class="trace-net" aria-hidden="true">
+              <path class="trace-path" />
+              <path class="trace-tail" />
+              <circle class="trace-dot" r="0" />
+              <circle class="trace-dot" r="0" />
+            </svg>
+          </figure>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Everything you need for modern learning.</h2>
+            <p class="section-sub">
+              From organized channels to AI-powered agents, Zedu brings communication, collaboration,
+              and automation into one seamless workspace.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="card feature feature-dark reveal">
+              <span class="icon-tile"><svg class="icon"><use href="#i-spark" /></svg></span>
+              <h3>AI Agents</h3>
+              <p>
+                Deploy intelligent assistants that automate routine tasks, support learners
+                instantly, and keep educators focused on what truly matters — teaching.
+              </p>
+              <p class="feature-tag"><svg class="icon"><use href="#i-spark" /></svg>Drafted 14 replies today</p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="icon-tile"><svg class="icon"><use href="#i-hash" /></svg></span>
+              <h3>Organized Channels</h3>
+              <p>
+                Create subject-based spaces for every cohort. Keep discussions focused,
+                announcements clear, and conversations threaded so nothing gets lost.
+              </p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="icon-tile"><svg class="icon"><use href="#i-chat" /></svg></span>
+              <h3>Cohort Communication</h3>
+              <p>
+                Manage bootcamps, classes, and learning groups with clearly defined communication
+                spaces. Keep educators aligned and learners informed in real time.
+              </p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="icon-tile"><svg class="icon"><use href="#i-video" /></svg></span>
+              <h3>Calls &amp; Collaboration</h3>
+              <p>
+                Work across languages, time zones, and regions with chats, docs, and meetings in
+                one place and bridge every gap with real-time collaboration tools.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing" id="pricing">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Simple, flexible pricing for education.</h2>
+            <p class="section-sub">
+              Flexible plans for educators, bootcamps and institutions building structured learning
+              environments with collaboration and AI support. Start free, upgrade when your cohorts grow.
+            </p>
+          </div>
+
+          <div class="price-grid">
+            <article class="price-card reveal">
+              <h3>Starter</h3>
+              <p class="price-line">Best for small classes and educators starting with Zedu.</p>
+              <p class="price"><span class="cur">₦</span><strong>0</strong><span class="per">/month</span></p>
+              <p class="price-note">No credit card needed</p>
+              <ul class="price-list">
+                <li><svg class="icon"><use href="#i-check" /></svg>Up to 3 cohorts</li>
+                <li><svg class="icon"><use href="#i-check" /></svg>Organized learning channels</li>
+                <li><svg class="icon"><use href="#i-check" /></svg>Basic messaging and threads</li>
+                <li><svg class="icon"><use href="#i-check" /></svg>File sharing</li>
+                <li><svg class="icon"><use href="#i-check" /></svg>Basic notifications</li>
+                <li><svg class="icon"><use href="#i-check" /></svg>Limited AI assistance</li>
+              </ul>
+              <a class="btn btn-ghost btn-block" href="#start">Get started free</a>
+            </article>
+
+            <article class="price-card price-popular reveal">
+              <span class="popular-tag">Most popular</span>
+              <h3>Pro</h3>
+              <p class="price-line">Best for bootcamps and structured programs.</p>
+              <p class="price"><span class="cur">₦</span><strong>20K</strong><span class="per">/month</span></p>
+              <p class="price-note">Everything in Starter, and</p>
+              <ul class="price-list">
+                <li><svg class="icon"><use href="#i-check" /></svg>Unlimited cohorts</li>
+                <li><svg class="icon"><use href="#i-check" /></svg>Live classes and collaboration tools</li>
+                <li><svg class="icon"><use href="#i-check" /></svg>AI study assistants</li>
+                <li><svg class="icon"><use href="#i-check" /></svg>Assignment and cohort management</li>
+                <li><svg class="icon"><use href="#i-check" /></svg>Admin moderation tools</li>
+              </ul>
+              <a class="btn btn-primary btn-block" href="#start">Start Pro plan</a>
+            </article>
+
+            <article class="price-card reveal">
+              <h3>Enterprise</h3>
+              <p class="price-line">Flexible pricing for universities, large programs, and institutions.</p>
+              <p class="price price-talk">Let's talk</p>
+              <p class="price-note">Everything in Pro, and</p>
+              <ul class="price-list">
+                <li><svg class="icon"><use href="#i-check" /></svg>Advanced AI agents and automation</li>
+                <li><svg class="icon"><use href="#i-check" /></svg>Institution-level workspace control</li>
+                <li><svg class="icon"><use href="#i-check" /></svg>Security and compliance tools</li>
+                <li><svg class="icon"><use href="#i-check" /></svg>Custom integrations</li>
+                <li><svg class="icon"><use href="#i-check" /></svg>Dedicated onboarding</li>
+                <li><svg class="icon"><use href="#i-check" /></svg>Priority support</li>
+              </ul>
+              <a class="btn btn-ghost btn-block" href="#start">Contact sales</a>
+            </article>
+          </div>
+
+          <aside class="pricing-promo reveal">
+            <span class="promo-badge" aria-hidden="true">
+              <svg class="icon"><use href="#i-spark" /></svg>
+            </span>
+            <div class="promo-copy">
+              <p class="promo-kicker">Launching a bootcamp?</p>
+              <p>Let's build a pricing model that fits your cohort size.</p>
+            </div>
+            <a class="promo-link" href="#compare">
+              Compare different plans
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+            </a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="compare" id="compare">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Compare every little thing.</h2>
+            <p class="section-sub">
+              Same friendly platform, different horsepower. Find the column that fits your cohort —
+              no spreadsheets required.
+            </p>
+          </div>
+
+          <div class="compare-card reveal">
+            <div class="compare-scroll">
+              <table class="compare-table">
+                <caption class="sr-only">
+                  Feature comparison across the Starter, Pro and Enterprise plans
+                </caption>
+                <colgroup>
+                  <col />
+                  <col />
+                  <col class="col-pro" />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">What's included</th>
+                    <th scope="col" class="cmp-col">
+                      <span class="cmp-plan">Starter</span>
+                      <span class="cmp-price">₦0 / month</span>
+                    </th>
+                    <th scope="col" class="cmp-col">
+                      <span class="cmp-badge">Most loved</span>
+                      <span class="cmp-plan">Pro</span>
+                      <span class="cmp-price">₦20K / month</span>
+                    </th>
+                    <th scope="col" class="cmp-col">
+                      <span class="cmp-plan">Enterprise</span>
+                      <span class="cmp-price">Let's talk</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="cmp-group">
+                    <th colspan="4" scope="colgroup">Workspace &amp; community</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Workspaces</th>
+                    <td class="cmp-txt">1</td>
+                    <td class="cmp-txt">Unlimited</td>
+                    <td class="cmp-txt">Unlimited</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cohorts / bootcamps</th>
+                    <td class="cmp-txt">3</td>
+                    <td class="cmp-txt">Unlimited</td>
+                    <td class="cmp-txt">Unlimited</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Teachers / admins</th>
+                    <td class="cmp-txt">Up to 5</td>
+                    <td class="cmp-txt">Up to 50</td>
+                    <td class="cmp-txt">Unlimited</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Students per cohort</th>
+                    <td class="cmp-txt">Limited</td>
+                    <td class="cmp-txt">Up to 500</td>
+                    <td class="cmp-txt">Custom</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Channels</th>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Threaded discussions</th>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+
+                  <tr class="cmp-group">
+                    <th colspan="4" scope="colgroup">Communication &amp; collaboration</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Direct messaging</th>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Group discussions</th>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Announcement channels</th>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Voice &amp; video calls</th>
+                    <td class="cmp-no"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Screen sharing</th>
+                    <td class="cmp-no"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Class recordings</th>
+                    <td class="cmp-no"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+
+                  <tr class="cmp-group">
+                    <th colspan="4" scope="colgroup">Learning tools</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">File sharing</th>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Assignment discussions</th>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Course channels</th>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Shared resources</th>
+                    <td class="cmp-no"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">AI study assistant</th>
+                    <td class="cmp-txt">Limited</td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-txt">Advanced</td>
+                  </tr>
+
+                  <tr class="cmp-group">
+                    <th colspan="4" scope="colgroup">Automation &amp; AI</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">AI message summaries</th>
+                    <td class="cmp-no"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">AI learning assistants</th>
+                    <td class="cmp-txt">Limited</td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-txt">Advanced</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Workflow automation</th>
+                    <td class="cmp-no"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>
+                    <td class="cmp-no"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">AI moderation</th>
+                    <td class="cmp-no"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>
+                    <td class="cmp-no"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+
+                  <tr class="cmp-group">
+                    <th colspan="4" scope="colgroup">Administration &amp; security</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Admin controls</th>
+                    <td class="cmp-txt">Basic</td>
+                    <td class="cmp-txt">Advanced</td>
+                    <td class="cmp-txt">Full</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Workspace permissions</th>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Analytics dashboard</th>
+                    <td class="cmp-no"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">API &amp; integrations</th>
+                    <td class="cmp-no"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>
+                    <td class="cmp-txt">Limited</td>
+                    <td class="cmp-txt">Full</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Dedicated support</th>
+                    <td class="cmp-no"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>
+                    <td class="cmp-no"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>
+                    <td class="cmp-yes"><svg class="icon"><use href="#i-check" /></svg><span class="sr-only">Included</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <p class="compare-hint reveal" aria-hidden="true">
+            Swipe sideways to see every plan
+            <svg class="icon"><use href="#i-arrow" /></svg>
+          </p>
+        </div>
+      </section>
+
+      <section class="faq" id="faq">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Questions, answered like a human.</h2>
+            <p class="section-sub">
+              The short version. For the long version, we're only one message away.
+            </p>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item reveal">
+              <summary>
+                <span>What is Zedu?</span>
+                <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus" /></svg></span>
+              </summary>
+              <p>
+                Zedu is a communication and learning platform built for schools, bootcamps and
+                training programmes. It combines structured channels, learning workflows and
+                AI-powered support to help educators teach and learners stay engaged.
+              </p>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>
+                <span>How does Zedu support students and learners?</span>
+                <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus" /></svg></span>
+              </summary>
+              <p>
+                Zedu supports learners with organized class spaces, timely reminders, searchable
+                learning materials and quick help through AI assistants. Students can follow
+                lessons, ask questions and track progress in one place.
+              </p>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>
+                <span>Is Zedu difficult to set up for a school or bootcamp?</span>
+                <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus" /></svg></span>
+              </summary>
+              <p>
+                No. Zedu is designed for quick onboarding with simple setup steps, guided workspace
+                creation and role-based controls. Most teams can start running cohorts or classes
+                in a short time.
+              </p>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>
+                <span>Can Zedu use our institution's information to answer questions?</span>
+                <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus" /></svg></span>
+              </summary>
+              <p>
+                Yes. You can connect your institutional content — course documents, policies and
+                internal resources — so AI assistants can provide responses grounded in your own
+                approved materials.
+              </p>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>
+                <span>Is student support fully automated?</span>
+                <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus" /></svg></span>
+              </summary>
+              <p>
+                No. Zedu uses a hybrid model where AI handles routine questions and guidance, while
+                educators and staff remain in control for mentoring, grading and sensitive support
+                decisions.
+              </p>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>
+                <span>How does pricing work for educational institutions?</span>
+                <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus" /></svg></span>
+              </summary>
+              <p>
+                Pricing is flexible based on your institution size, usage needs and required
+                features. Zedu offers plans for growing cohorts and custom options for larger
+                schools or multi-programme organisations.
+              </p>
+            </details>
+          </div>
+
+          <p class="faq-foot reveal">
+            Still curious?
+            <a href="#start">Talk to a human <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+          </p>
+        </div>
+      </section>
+
+      <section class="cta" id="start">
+        <div class="container">
+          <div class="cta-panel reveal">
+            <div class="cta-rings" aria-hidden="true"><span></span><span></span></div>
+            <h2>Run your next cohort without limits.</h2>
+            <p class="cta-sub">Join thousands of educators building better learning experiences.</p>
+            <div class="cta-actions">
+              <a class="btn btn-light" href="index.html">Open the live demo</a>
+              <a class="btn btn-outline-light" href="#pricing">Contact sales</a>
+            </div>
+            <p class="cta-note">Free to start · No credit card needed</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand brand-light" href="#top" aria-label="Zedu home">
+              <img src="assets/zedu-mark.svg" alt="" width="24" height="30" />
+              <span>Zedu</span>
+            </a>
+            <p>The learning platform for bootcamps, schools, and cohorts.</p>
+          </div>
+
+          <nav class="footer-col" aria-label="Products">
+            <h3>Products</h3>
+            <a href="#features">Buzz</a>
+            <a href="#features">Channels</a>
+            <a href="#features">File management</a>
+            <a href="#features">AI agents</a>
+          </nav>
+
+          <nav class="footer-col" aria-label="Solutions">
+            <h3>Solutions</h3>
+            <a href="#features">Bootcamps</a>
+            <a href="#features">Schools</a>
+            <a href="#features">Universities</a>
+            <a href="#pricing">Pricing</a>
+          </nav>
+
+          <nav class="footer-col" aria-label="Resources">
+            <h3>Resources</h3>
+            <a href="#features">Resource library</a>
+            <a href="#start">Contact us</a>
+            <a href="#top">Privacy policy</a>
+            <a href="#top">Terms of service</a>
+          </nav>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Zedu. All rights reserved.</p>
+          <div class="footer-social">
+            <a href="#top">X</a>
+            <a href="#top">Instagram</a>
+            <a href="#top">TikTok</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
